@@ -5,7 +5,7 @@ Integrantes: Tomas Manriquez
              Manuel Gatica 
              Fabian Ruiz
 Region: Magallanes XII
-"""
+
 Medio	url website
 El Bagual	http://elbagual.cl/
 NatalesOnLine	http://www.natalesonline.cl/
@@ -24,4 +24,4 @@ Ovejero Noticias https://www.ovejeronoticias.cl/
 El Magallanico https://elmagallanico.com/
 Radio Magallanes https://www.radiomagallanes.cl/
 
-"""
+
