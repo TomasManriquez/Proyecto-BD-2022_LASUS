@@ -1,0 +1,42 @@
+diccionario de datos:
+{
+
+    Medios de prensa:
+        nombre: varchar(300)
+        url: varchar(300)
+        categoría: varchar(300)
+        idioma: varchar(300)
+        región: varchar(300)
+        país: varchar(300)
+        
+
+    Dueño:
+        nombre:varchar(300)
+        tipo:varchar(300)
+        fecha de apropiación:(date) dd/mm/aaaa    
+    
+    Noticias:
+        título:varchar(300)
+        contenido textual:varchar(300)
+        fecha publicacion:(date) dd/mm/aaaa 
+        url:varchar(300)
+    
+    Periodista:
+        nombre:varchar(300)
+        genero:varchar(300)
+
+    Persona
+        nombre: varchar(300)
+        nacionalidad: varchar(300)
+        profesion: varchar(300)
+        fecha nacimiento: date (dd/mm/aaaa)
+    
+    Popularidad:
+	puntaje: (int)
+	fecha: date (dd/mm/aaaa)
+}
+
+
+
+
+    
