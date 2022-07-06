@@ -1,0 +1,11 @@
+Medios(PK_id_medio, url, nombre, categoria, idioma, region, pais, fecha_adquisicion, #id_dueño)
+
+Dueño(PK_id_dueño, tipo)
+
+Noticias(PK_id_noticias, url, titulo, contenido_textual, fecha_publicacion, contenido, #id_medio)
+
+Menciona(#id_noticia, #id_persona)
+
+Persona(PK_id_persona, nombre, nacionalidad, profesion, fecha_nacimiento )
+
+popularidad(Pk_id_popularidad, url, nombre, popularidad, #id_persona)  
