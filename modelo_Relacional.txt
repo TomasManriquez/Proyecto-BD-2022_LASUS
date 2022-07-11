@@ -1,11 +1,14 @@
-Medios(PK_id_medio, url, nombre, categoria, idioma, region, pais, fecha_adquisicion, #id_dueño)
+medio_prensa(PK_id_medio, url_medio, nombre_medio, fecha_creacion, pais, region, idioma, #id_dueño)
 
-Dueño(PK_id_dueño, tipo)
+dueño(PK_id_dueño, nombre_dueño, persona_natural)
 
-Noticias(PK_id_noticias, url, titulo, contenido_textual, fecha_publicacion, contenido, #id_medio)
+posee(PK(#id_medio, #id_dueño) , fecha_adquisicion)
 
-Menciona(#id_noticia, #id_persona)
+noticias(PK_id_noticias, url_noticia, titulo, contenido, fecha_publicacion, #id_medio)
 
-Persona(PK_id_persona, nombre, nacionalidad, profesion, fecha_nacimiento )
+menciona(PK(#id_noticia, #id_persona))
 
-popularidad(Pk_id_popularidad, url, nombre, popularidad, #id_persona)  
+persona(PK_id_persona, nombre_persona, url_wiki, nacionalidad, profesion, fecha_nacimiento )
+
+popularidad(Pk_id_popularidad, fecha, puntaje, #id_persona)  
+ 
