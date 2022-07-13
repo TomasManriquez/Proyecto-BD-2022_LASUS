@@ -49,11 +49,11 @@ cur.execute("INSERT INTO persona(id_persona, nombre_persona, url_wiki, nacionali
 
 #Añadir a tabla popularidad
 cur.execute("DELETE FROM popularidad WHERE id_popularidad=000001")
-cur.execute("INSERT INTO popularidad(id_popularidad,puntaje,fecha) VALUES('000001','0','10-07-22')")
+cur.execute("INSERT INTO popularidad(id_popularidad,puntaje,fecha, id_persona) VALUES('000001','0','10-07-22','000001')")
 
 #Añadir a menciona tiene
 cur.execute("DELETE FROM menciona WHERE id_persona = '000001'")
-cur.execute("INSERT INTO menciona(id_persona, id_noticia) VALUES('1','1')")
+cur.execute("INSERT INTO menciona(id_persona, id_noticia) VALUES('000001','000001')")
 
 #realiza el comit y cierra la coneccion con la base de datos
 
