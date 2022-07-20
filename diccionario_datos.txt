@@ -2,7 +2,7 @@ diccionario de datos:
 {
 
 	Medios de prensa:
-		nombre: varchar(32)
+		nombre_medio: varchar(32)
 		url_medio: varchar(300)
 		idioma: varchar(32)
 		región: varchar(32)
@@ -10,7 +10,7 @@ diccionario de datos:
 		fecha_creacion: date (dd/mm/aa)
 
 	Dueño:
-		nombre: varchar(32)
+		nombre_dueño: varchar(32)
 		persona_natural: bool
 
 	Posee:
@@ -23,7 +23,7 @@ diccionario de datos:
 		url_noticia: varchar(300)
 
 	Persona:
-		nombre: varchar(32)
+		nombre_persona: varchar(32)
 		nacionalidad: varchar(32)
 		profesión: varchar(32)
 		fecha_nacimiento: date (dd/mm/aa)
