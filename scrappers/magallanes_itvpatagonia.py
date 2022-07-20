@@ -37,6 +37,7 @@ headers = {'user-agent':random.choice(USER_AGENT_LIST) }
 response = session.get(URL,headers=headers)
 xpath_url="//h3/a/@href"
 all_urls = response.html.xpath(xpath_url)[:4]
+noticias=[]
 
 n=1
 for url in all_urls:
@@ -68,3 +69,4 @@ for url in all_urls:
         text=text+" "+content
     print(text)
     print("----------------------------------------------------------------------------------------")
+    noticias.append(text)

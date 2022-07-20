@@ -33,7 +33,7 @@ USER_AGENT_LIST = [
         "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"
 ]
 headers = {'user-agent':random.choice(USER_AGENT_LIST) }
-
+noticias=[]
 response = session.get(URL,headers=headers)
 xpath_url="//span[@class='noticia-titulo']/a/@href"
 all_urls = response.html.xpath(xpath_url)[:4]
@@ -67,3 +67,4 @@ for url in all_urls:
         text=text+" "+content
     print(text)
     print("----------------------------------------------------------------------------------------")
+    noticias.append(text)

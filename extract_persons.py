@@ -1,30 +1,21 @@
-from typing import TextIO
 import spacy
-import fr_core_news_md
-from scrappers.magallanes_magallanews import text as texto
-#import scrappers.magallanes_elmagallanico as A
+from scrappers.magallanes_magallanews import noticias as textos
 
 nlp = spacy.load("es_core_news_md")
 
-import warnings
-warnings.filterwarnings("ignore")
 
-
-#doc = nlp(texto)
 
 print("--------------------")
-
-for i, textual in enumerate(texto):
-    doc= nlp(textual)
-    persona=[]
+n=1
+for noticia in textos:
+    doc = nlp(noticia)
+    print("Personas Noticia ",n,":")
     for ent in doc.ents:
-        if ((ent.label_ == "PER") and ((" " in ent.text))):
+        if ((ent.label_ == "PER")):
             
             #persona mencionada
             person = ent.text
-            #print(person)
-            persona.append(person)
+            print(person)
 
-            #print("--------------------")
-
-    print(persona)
+    n+=1
+    print("--------------------")
