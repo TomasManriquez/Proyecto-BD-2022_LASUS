@@ -9,7 +9,7 @@ def format_date(date):
 session = HTMLSession()
 
 ## URL que escrapear
-URL = "https://www.itvpatagonia.com/categoria/nacional"
+URL = "https://laprensaaustral.cl/category/nacional/"
 
 ## Simular que estamos utilizando un navegador web
 USER_AGENT_LIST = [
@@ -35,20 +35,19 @@ USER_AGENT_LIST = [
 headers = {'user-agent':random.choice(USER_AGENT_LIST) }
 
 response = session.get(URL,headers=headers)
-xpath_url="//h3/a/@href"
+xpath_url="//span[@class='noticia-titulo']/a/@href"
 all_urls = response.html.xpath(xpath_url)[:4]
 
 n=1
 for url in all_urls:
 
-
-    url= "https://www.itvpatagonia.com" + url
     print("Noticia ", n)
     n=n+1
     response = session.get(url,headers=headers)
     xpath_title='//div//h1'
     xpath_date="//meta[@property='article:published_time']//@content"
-    xpath_text="//div/p/text()"
+    xpath_text="//div/p"
+
     print(url)
 
     title = response.html.xpath(xpath_title)[0].text
@@ -60,7 +59,7 @@ for url in all_urls:
     list_p = response.html.xpath(xpath_text)
     text=""
     for p in list_p:
-        content = p
+        content = p.text
         content = w3lib.html.remove_tags(content)
         content = w3lib.html.replace_escape_chars(content)
         content = html.unescape(content)
